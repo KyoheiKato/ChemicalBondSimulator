@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69887A81F19C57CF53F56006 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6988777DC177A5ACF391D1C1 /* .gitignore */; };
+		69887DCC1B7B8114E7D9E7CC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 69887EDA6505A1247EC490DF /* README.md */; };
 		B270598C1B0C644A00B87E34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B270598B1B0C644A00B87E34 /* AppDelegate.swift */; };
 		B270598E1B0C644A00B87E34 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B270598D1B0C644A00B87E34 /* art.scnassets */; };
 		B27059901B0C644A00B87E34 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B270598F1B0C644A00B87E34 /* GameViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6988777DC177A5ACF391D1C1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		69887EDA6505A1247EC490DF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		B27059861B0C644A00B87E34 /* ChemicalBondSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemicalBondSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B270598A1B0C644A00B87E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B270598B1B0C644A00B87E34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				B27059881B0C644A00B87E34 /* ChemicalBondSimulator */,
 				B27059A01B0C644A00B87E34 /* ChemicalBondSimulatorTests */,
 				B27059871B0C644A00B87E34 /* Products */,
+				6988777DC177A5ACF391D1C1 /* .gitignore */,
+				69887EDA6505A1247EC490DF /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +205,8 @@
 				B27059951B0C644A00B87E34 /* Images.xcassets in Resources */,
 				B270598E1B0C644A00B87E34 /* art.scnassets in Resources */,
 				B27059931B0C644A00B87E34 /* Main.storyboard in Resources */,
+				69887A81F19C57CF53F56006 /* .gitignore in Resources */,
+				69887DCC1B7B8114E7D9E7CC /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
