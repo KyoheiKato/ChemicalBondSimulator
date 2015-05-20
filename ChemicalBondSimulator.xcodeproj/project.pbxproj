@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		698879D2424B2392F64CA789 /* Hydrogen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698873ED219FC0BC1A0859BB /* Hydrogen.swift */; };
 		69887A81F19C57CF53F56006 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6988777DC177A5ACF391D1C1 /* .gitignore */; };
+		69887DC502A0BF0FE24FDAFB /* Molecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698879ED8D813F59A05DC517 /* Molecule.swift */; };
 		69887DCC1B7B8114E7D9E7CC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 69887EDA6505A1247EC490DF /* README.md */; };
 		B270598C1B0C644A00B87E34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B270598B1B0C644A00B87E34 /* AppDelegate.swift */; };
 		B270598E1B0C644A00B87E34 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B270598D1B0C644A00B87E34 /* art.scnassets */; };
@@ -29,7 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		698873ED219FC0BC1A0859BB /* Hydrogen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hydrogen.swift; sourceTree = "<group>"; };
 		6988777DC177A5ACF391D1C1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		698879ED8D813F59A05DC517 /* Molecule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Molecule.swift; sourceTree = "<group>"; };
 		69887EDA6505A1247EC490DF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		B27059861B0C644A00B87E34 /* ChemicalBondSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemicalBondSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B270598A1B0C644A00B87E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6988771C322ACF15922463A1 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				698873ED219FC0BC1A0859BB /* Hydrogen.swift */,
+				698879ED8D813F59A05DC517 /* Molecule.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		B270597D1B0C644A00B87E34 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +105,7 @@
 				B27059941B0C644A00B87E34 /* Images.xcassets */,
 				B27059961B0C644A00B87E34 /* LaunchScreen.xib */,
 				B27059891B0C644A00B87E34 /* Supporting Files */,
+				6988771C322ACF15922463A1 /* Objects */,
 			);
 			path = ChemicalBondSimulator;
 			sourceTree = "<group>";
@@ -226,6 +240,8 @@
 			files = (
 				B27059901B0C644A00B87E34 /* GameViewController.swift in Sources */,
 				B270598C1B0C644A00B87E34 /* AppDelegate.swift in Sources */,
+				698879D2424B2392F64CA789 /* Hydrogen.swift in Sources */,
+				69887DC502A0BF0FE24FDAFB /* Molecule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
