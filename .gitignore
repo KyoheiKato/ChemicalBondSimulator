@@ -21,5 +21,6 @@ Podfile.lock
 
 # others
 *.swp
+.idea/
 !.gitkeep
 .DS_Store
