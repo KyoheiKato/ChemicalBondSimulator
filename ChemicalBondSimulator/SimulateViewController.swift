@@ -17,6 +17,8 @@ class SimulateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = molecule.name
+        
         // create a new scene
         let scene = SCNScene()
         
@@ -43,11 +45,16 @@ class SimulateViewController: UIViewController {
         scene.rootNode.addChildNode(ambientLightNode)
 
         var atoms: [Atom] = molecule.atoms
-        for atom in atoms {
+        for (index, atom) in enumerate(atoms) {
             atom.objectNode.position = SCNVector3(x: atom.position[0], y: atom.position[1], z: atom.position[2])
             atom.sphere.firstMaterial?.diffuse.contents = atom.color.getUIColor()
             atom.sphere.radius = CGFloat(atom.size)
             scene.rootNode.addChildNode(atom.objectNode)
+        }
+        
+        for index in 0..<(atoms.count)-1 {
+            let bond = Bond.getBond(atoms[index].position, position2: atoms[index + 1].position)
+            scene.rootNode.addChildNode(bond)
         }
 
         // retrieve the SCNView

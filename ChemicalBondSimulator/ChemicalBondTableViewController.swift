@@ -11,15 +11,17 @@ class ChemicalBondTableViewController: UITableViewController {
     @IBOutlet var chemicalBondList: UITableView!
     
     var molecules: [Molecule] = []
-    var senderMolecule: Molecule? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        super.title = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName") as! String?
         
         chemicalBondList.delegate = self
         chemicalBondList.dataSource = self
         
         molecules.append(Water())
+        molecules.append(CarbonDioxide())
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,8 +30,7 @@ class ChemicalBondTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let tableViewCell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
-        senderMolecule = molecules[indexPath.row]
-        tableViewCell.textLabel?.text = senderMolecule!.name
+        tableViewCell.textLabel?.text = molecules[indexPath.row].name
         return tableViewCell
     }
     
@@ -39,6 +40,7 @@ class ChemicalBondTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var simulateViewController: SimulateViewController = segue.destinationViewController as! SimulateViewController
-        simulateViewController.molecule = senderMolecule
+        var indexPath = chemicalBondList.indexPathForSelectedRow()!
+        simulateViewController.molecule = molecules[indexPath.row]
     }
 }

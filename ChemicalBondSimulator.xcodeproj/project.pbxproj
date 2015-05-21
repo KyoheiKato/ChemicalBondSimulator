@@ -26,6 +26,8 @@
 		B2AA88691B0DA0B3004048FC /* ColorSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AA88681B0DA0B3004048FC /* ColorSchema.swift */; };
 		B2B4DA171B0DDD4100FEDBFD /* Molecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4DA161B0DDD4100FEDBFD /* Molecule.swift */; };
 		B2B4DA191B0DF80300FEDBFD /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4DA181B0DF80300FEDBFD /* Water.swift */; };
+		B2B4DA1D1B0E1A9C00FEDBFD /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4DA1C1B0E1A9C00FEDBFD /* Bond.swift */; };
+		B2B4DA1F1B0E37F600FEDBFD /* CarbonDioxide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4DA1E1B0E37F600FEDBFD /* CarbonDioxide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		B2AA88681B0DA0B3004048FC /* ColorSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSchema.swift; sourceTree = "<group>"; };
 		B2B4DA161B0DDD4100FEDBFD /* Molecule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Molecule.swift; sourceTree = "<group>"; };
 		B2B4DA181B0DF80300FEDBFD /* Water.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
+		B2B4DA1C1B0E1A9C00FEDBFD /* Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bond.swift; sourceTree = "<group>"; };
+		B2B4DA1E1B0E37F600FEDBFD /* CarbonDioxide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbonDioxide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				69887B20B2907DE2F32F839C /* Oxygen.swift */,
 				B2B4DA161B0DDD4100FEDBFD /* Molecule.swift */,
 				B2B4DA181B0DF80300FEDBFD /* Water.swift */,
+				B2B4DA1C1B0E1A9C00FEDBFD /* Bond.swift */,
+				B2B4DA1E1B0E37F600FEDBFD /* CarbonDioxide.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 				TargetAttributes = {
 					B27059851B0C644A00B87E34 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = RM3N4N4RRF;
 					};
 					B270599C1B0C644A00B87E34 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -392,7 +399,9 @@
 				B27059901B0C644A00B87E34 /* SimulateViewController.swift in Sources */,
 				B270598C1B0C644A00B87E34 /* AppDelegate.swift in Sources */,
 				B2AA88691B0DA0B3004048FC /* ColorSchema.swift in Sources */,
+				B2B4DA1D1B0E1A9C00FEDBFD /* Bond.swift in Sources */,
 				B2B4DA191B0DF80300FEDBFD /* Water.swift in Sources */,
+				B2B4DA1F1B0E37F600FEDBFD /* CarbonDioxide.swift in Sources */,
 				698879D2424B2392F64CA789 /* Hydrogen.swift in Sources */,
 				69887DC502A0BF0FE24FDAFB /* Atom.swift in Sources */,
 				6988755E8B6E363848F600E8 /* Carbon.swift in Sources */,
@@ -528,6 +537,7 @@
 			baseConfigurationReference = 6CAE378C656D2F72BA492ED0 /* Pods-ChemicalBondSimulator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ChemicalBondSimulator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,6 +550,7 @@
 			baseConfigurationReference = 3E29B54A01164144478F7AED /* Pods-ChemicalBondSimulator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ChemicalBondSimulator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

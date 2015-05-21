@@ -9,7 +9,7 @@ import SceneKit
 
 class Carbon: Atom {
     init() {
-        super.init(name: "炭素", size: 0.2)
-        color = ColorSchema(red: 158, green: 158, blue: 158)
+        super.init(name: "炭素", size: 0.5)
+        color = ColorSchema(red: 189, green: 189, blue: 189)
     }
 }
