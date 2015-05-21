@@ -15,7 +15,7 @@ class ChemicalBondTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        super.title = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName") as! String?
+        super.title = "化学結合リスト"
         
         chemicalBondList.delegate = self
         chemicalBondList.dataSource = self
