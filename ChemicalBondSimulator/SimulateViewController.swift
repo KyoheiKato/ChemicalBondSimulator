@@ -10,7 +10,9 @@ import UIKit
 import QuartzCore
 import SceneKit
 
-class GameViewController: UIViewController {
+class SimulateViewController: UIViewController {
+    
+    var molecule: Molecule!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class GameViewController: UIViewController {
         scene.rootNode.addChildNode(cameraNode)
         
         // place the camera
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 5)
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 10)
         
         // create and add a light to the scene
         let lightNode = SCNNode()
@@ -40,9 +42,13 @@ class GameViewController: UIViewController {
         ambientLightNode.light!.color = UIColor.darkGrayColor()
         scene.rootNode.addChildNode(ambientLightNode)
 
-        var moleculeNode = Hydrogen(name: "hydrogen")
-        let hoge = moleculeNode.objectNode
-        scene.rootNode.addChildNode(hoge)
+        var atoms: [Atom] = molecule.atoms
+        for atom in atoms {
+            atom.objectNode.position = SCNVector3(x: atom.position[0], y: atom.position[1], z: atom.position[2])
+            atom.sphere.firstMaterial?.diffuse.contents = atom.color.getUIColor()
+            atom.sphere.radius = CGFloat(atom.size)
+            scene.rootNode.addChildNode(atom.objectNode)
+        }
 
         // retrieve the SCNView
         let scnView = self.view as! SCNView

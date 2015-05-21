@@ -7,15 +7,9 @@ import Foundation
 import UIKit
 import SceneKit
 
-class Hydrogen: Molecule {
-    var name: String
-    var sphere: SCNSphere
-    var objectNode: SCNNode
-
-    required init (name: String) {
-        self.name = name
-        self.sphere = SCNSphere(radius: 1.0)
-        self.sphere.firstMaterial?.diffuse.contents = UIColor.redColor()
-        self.objectNode = SCNNode(geometry: self.sphere)
+class Hydrogen: Atom {
+    init () {
+        super.init(name: "水素", size: 0.2)
+        color = ColorSchema(red: 3, green: 169, blue: 244)
     }
 }
