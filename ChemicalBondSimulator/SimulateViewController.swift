@@ -19,6 +19,10 @@ class SimulateViewController: UIViewController {
         
         self.title = molecule.name
         
+        //add view of keyboard
+//        var keyView: UIView = initKeyView()
+//        self.view.addSubview(keyView)
+        
         // create a new scene
         let scene = SCNScene()
         
@@ -28,7 +32,7 @@ class SimulateViewController: UIViewController {
         scene.rootNode.addChildNode(cameraNode)
         
         // place the camera
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 10)
+        cameraNode.position = SCNVector3(x: 0, y: -2, z: 10)
         
         // create and add a light to the scene
         let lightNode = SCNNode()
@@ -45,18 +49,21 @@ class SimulateViewController: UIViewController {
         scene.rootNode.addChildNode(ambientLightNode)
 
         var atoms: [Atom] = molecule.atoms
-        for (index, atom) in enumerate(atoms) {
-            atom.objectNode.position = SCNVector3(x: atom.position[0], y: atom.position[1], z: atom.position[2])
-            atom.sphere.firstMaterial?.diffuse.contents = atom.color.getUIColor()
-            atom.sphere.radius = CGFloat(atom.size)
-            scene.rootNode.addChildNode(atom.objectNode)
+        var bonds: [Bond] = molecule.bonds
+        
+        for bond in bonds {
+            scene.rootNode.addChildNode(bond.objectNode!)
         }
         
-        for index in 0..<(atoms.count)-1 {
-            let bond = Bond.getBond(atoms[index].position, position2: atoms[index + 1].position)
-            scene.rootNode.addChildNode(bond)
+        for atom in atoms {
+            scene.rootNode.addChildNode(atom.objectNode)
         }
+    
+//        cameraNode.runAction(SCNAction.rotateByAngle(CGFloat(M_PI) * -2, aroundAxis: SCNVector3(x: 0, y: 1, z: 0), duration: 1))
+//        cameraNode.runAction(SCNAction.rotateToAxisAngle(SCNVector4Make(0, 1, 0, -Float(M_PI_4 / 4)), duration: NSTimeInterval(3.0)))
+//        cameraNode.runAction(SCNAction.rotateByAngle(-Float(M_PI_4 / 4), aroundAxis: SCNVector3(x: 0, y: 1, z: 0), duration: NSTimeInterval))
 
+        
         // retrieve the SCNView
         let scnView = self.view as! SCNView
         

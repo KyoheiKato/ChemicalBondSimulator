@@ -13,7 +13,7 @@ class ColorSchema {
     var red: Int
     var green: Int
     var blue: Int
-    let alpha: Int = 1
+    let alpha: Float = 0.9
     
     init (red: Int, green: Int, blue: Int) {
         self.red = red

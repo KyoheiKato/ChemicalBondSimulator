@@ -8,8 +8,10 @@ import UIKit
 import SceneKit
 
 class Hydrogen: Atom {
-    init () {
-        super.init(name: "水素", size: 0.2)
+    required init () {
+        super.init()
+        self.name = "水素"
+        self.size = 0.2
         color = ColorSchema(red: 3, green: 169, blue: 244)
     }
 }

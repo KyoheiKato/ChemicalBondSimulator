@@ -9,16 +9,19 @@
 import Foundation
 import UIKit
 
-class Water: Molecule {    
+class Water: Molecule {
+    
     init() {
         super.init(name: "水")
-        let oxygen: Oxygen = Oxygen()
-        let hydrogens: [Hydrogen] = [Hydrogen(), Hydrogen()]
-        oxygen.position = [0.0, 0.5, 0.0]
+        let oxygens = Oxygen.generateAtoms(1) as [Oxygen]
+        let hydrogens = Hydrogen.generateAtoms(2) as [Hydrogen]
+        oxygens[0].position = [0.0, 0.5, 0.0]
         hydrogens[0].position = [-1.0, 0.0, 0.0]
         hydrogens[1].position = [1.0, 0.0, 0.0]
-        atoms.append(hydrogens[0])
-        atoms.append(oxygen)
-        atoms.append(hydrogens[1])
+        oxygens[0].neighborAtoms = hydrogens
+        
+        appendAtoms(oxygens)
+        appendAtoms(hydrogens)
+        appendBonds()
     }
 }

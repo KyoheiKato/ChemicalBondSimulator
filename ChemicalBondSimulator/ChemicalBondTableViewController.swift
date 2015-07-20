@@ -20,9 +20,8 @@ class ChemicalBondTableViewController: UITableViewController {
         chemicalBondList.delegate = self
         chemicalBondList.dataSource = self
         
-        molecules.append(Water())
-        molecules.append(CarbonDioxide())
-    }
+        molecules = MoleculeGenerator.generate()
+    }    
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return molecules.count

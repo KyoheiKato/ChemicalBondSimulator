@@ -11,18 +11,36 @@ import UIKit
 import SceneKit
 
 class Bond {
-    class func getBond(position1: [Float], position2: [Float]) -> SCNNode {
-        let bondGeometry = SCNCylinder(radius: CGFloat(0.05), height: CGFloat(genHeight(position1, position2: position2)))
+    var objectNode: SCNNode?
+    
+    class func generateBond(pos1: [Float], pos2: [Float]) -> Bond {
+        let height = calcHeight(pos1, pos2: pos2)
+        let bondGeometry = SCNCylinder(radius: CGFloat(0.05), height: height)
         bondGeometry.firstMaterial?.diffuse.contents = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
-        let bond = SCNNode(geometry: bondGeometry)
-        bond.position = SCNVector3(x: (position1[0] + position2[0]) / 2.0, y: (position1[1] + position2[1]) / 2.0, z: 0)
-        bond.eulerAngles.z = acos(position1[1] - position2[1] / genHeight(position1, position2: position2))
+        let bond = Bond()
+        bond.objectNode = SCNNode(geometry: bondGeometry)
+        let position = calcPosition(pos1, pos2: pos2)
+        bond.objectNode!.position = SCNVector3(x: position[0], y: position[1], z: position[2])
+//        bond.objectNode!.eulerAngles.x = calcAngle(pos1[2], axis2: pos2[2], height: height)
+//        bond.objectNode!.eulerAngles.y = calcAngle(pos1[0], axis2: pos2[0], height: height)
+        bond.objectNode!.eulerAngles.z = calcAngle(pos1[1], axis2: pos2[1], height: height)
+        
         return bond
     }
     
-    static func genHeight(position1: [Float], position2: [Float]) -> Float {
-        var x = abs(position1[0] - position2[0])
-        var y = abs(position1[1] - position2[1])
-        return sqrtf(x * x + y * y)
+    static func calcHeight(pos1: [Float], pos2: [Float]) -> CGFloat {
+        var x: Float = pos1[0] - pos2[0]
+        var y: Float = pos1[1] - pos2[1]
+        var z: Float = pos1[2] - pos2[2]
+        
+        return CGFloat(sqrtf(x * x + y * y + z * z))
+    }
+    
+    static func calcPosition(pos1: [Float], pos2: [Float]) -> [Float] {
+        return [(pos1[0] + pos2[0]) / 2.0, (pos1[1] + pos2[1]) / 2.0, (pos1[2] + pos2[2]) / 2.0]
+    }
+    
+    static func calcAngle(axis1: Float, axis2: Float, height: CGFloat) -> Float {
+        return acos((axis1 - axis2) / Float(height))
     }
 }

@@ -8,8 +8,10 @@ import UIKit
 import SceneKit
 
 class Carbon: Atom {
-    init() {
-        super.init(name: "炭素", size: 0.5)
+    required init() {
+        super.init()
+        self.name = "炭素"
+        self.size = 0.5
         color = ColorSchema(red: 189, green: 189, blue: 189)
     }
 }
