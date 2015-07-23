@@ -10,7 +10,7 @@ import SceneKit
 class Hydrogen: Atom {
     required init () {
         super.init()
-        self.name = "水素"
+        self.name = "H"
         self.size = 0.2
         color = ColorSchema(red: 3, green: 169, blue: 244)
     }

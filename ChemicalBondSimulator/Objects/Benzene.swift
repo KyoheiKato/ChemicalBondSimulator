@@ -32,5 +32,6 @@ class Benzene: Molecule {
         appendAtoms(carbons)
         appendAtoms(hydrogens)
         appendBonds()
+        initLabelPosition()
     }
 }

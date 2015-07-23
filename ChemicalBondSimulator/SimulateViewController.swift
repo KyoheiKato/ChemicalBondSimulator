@@ -57,6 +57,7 @@ class SimulateViewController: UIViewController {
         
         for atom in atoms {
             scene.rootNode.addChildNode(atom.objectNode)
+            scene.rootNode.addChildNode(atom.labelNode!)
         }
     
 //        cameraNode.runAction(SCNAction.rotateByAngle(CGFloat(M_PI) * -2, aroundAxis: SCNVector3(x: 0, y: 1, z: 0), duration: 1))

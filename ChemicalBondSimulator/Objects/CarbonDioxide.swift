@@ -22,5 +22,6 @@ class CarbonDioxide: Molecule {
         appendAtoms(oxygens)
         appendAtoms(carbons)
         appendBonds()
+        initLabelPosition()
     }
 }

@@ -10,7 +10,7 @@ import SceneKit
 class Oxygen: Atom {
     required init() {
         super.init()
-        self.name = "酸素"
+        self.name = "O"
         self.size = 0.4
         color = ColorSchema(red: 244, green: 67, blue: 54)
     }    

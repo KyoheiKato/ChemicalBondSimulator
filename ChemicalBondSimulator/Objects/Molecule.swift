@@ -35,4 +35,16 @@ class Molecule {
             bonds.extend(atom.generateBonds())
         }
     }
+    
+    func initLabelPosition() {
+        for atom in atoms {
+            atom.labelGeometry = SCNText(string: "", extrusionDepth: 0.1)
+            atom.labelGeometry!.font = UIFont(name: "HelveticaNeue-Bold", size: CGFloat(atom.size! * 1.5))
+            atom.labelGeometry!.string = atom.name
+            atom.labelNode = SCNNode(geometry: atom.labelGeometry!)
+            atom.labelNode!.position = SCNVector3Make(atom.objectNode.position.x - Float(atom.size! / 1.7), atom.objectNode.position.y - Float(atom.size! / 1.7), atom.objectNode.position.z + Float(atom.size!) - Float(atom.labelGeometry!.extrusionDepth / 2.0))
+            println("objectNode x:\(atom.objectNode.position.x) y: \(atom.objectNode.position.y) z: \(atom.objectNode.position.z)")
+            println("labelNode x:\(atom.labelNode!.position.x) y:\(atom.labelNode!.position.y) z:\(atom.labelNode!.position.z)")
+        }
+    }
 }

@@ -23,5 +23,6 @@ class Water: Molecule {
         appendAtoms(oxygens)
         appendAtoms(hydrogens)
         appendBonds()
+        initLabelPosition()
     }
 }

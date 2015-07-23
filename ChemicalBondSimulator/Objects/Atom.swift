@@ -15,6 +15,8 @@ class Atom {
     var sphere: SCNSphere
     var position: [Float]
     var objectNode: SCNNode
+    var labelGeometry: SCNText?
+    var labelNode: SCNNode?
     var neighborAtoms: [Atom]
 
     required init() {
