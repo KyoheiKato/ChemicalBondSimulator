@@ -17,6 +17,10 @@ class MoleculeGenerator {
         var molecules: [Molecule] = []
         molecules.append(Water())
         molecules.append(CarbonDioxide())
+        molecules.append(Benzene())
+        molecules.append(Methane())
+        molecules.append(Ethanol())
+        molecules.append(Trehalose())
         
         return molecules
     }
