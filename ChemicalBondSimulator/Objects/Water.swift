@@ -18,7 +18,7 @@ class Water: Molecule {
         oxygens[0].position = [0.0, 0.5, 0.0]
         hydrogens[0].position = [-1.0, 0.0, 0.0]
         hydrogens[1].position = [1.0, 0.0, 0.0]
-        oxygens[0].neighborAtoms = hydrogens
+        oxygens[0].neighborAtoms = [1: hydrogens]
         
         appendAtoms(oxygens)
         appendAtoms(hydrogens)

@@ -17,7 +17,7 @@ class CarbonDioxide: Molecule {
         oxygens[0].position = [-1.0, 0.0, 0.0]
         oxygens[1].position = [1.0, 0.0, 0.0]
         carbons[0].position = [0.0, 0.0, 0.0]
-        carbons[0].neighborAtoms = oxygens
+        carbons[0].neighborAtoms = [2: oxygens]
         
         appendAtoms(oxygens)
         appendAtoms(carbons)

@@ -31,7 +31,7 @@ class Molecule {
     }
     
     func appendBonds() {
-        for atom in atoms {
+        for atom in atoms {            
             bonds.extend(atom.generateBonds())
         }
     }
@@ -43,8 +43,6 @@ class Molecule {
             atom.labelGeometry!.string = atom.name
             atom.labelNode = SCNNode(geometry: atom.labelGeometry!)
             atom.labelNode!.position = SCNVector3Make(atom.objectNode.position.x - Float(atom.size! / 1.7), atom.objectNode.position.y - Float(atom.size! / 1.7), atom.objectNode.position.z + Float(atom.size!) - Float(atom.labelGeometry!.extrusionDepth / 2.0))
-            println("objectNode x:\(atom.objectNode.position.x) y: \(atom.objectNode.position.y) z: \(atom.objectNode.position.z)")
-            println("labelNode x:\(atom.labelNode!.position.x) y:\(atom.labelNode!.position.y) z:\(atom.labelNode!.position.z)")
         }
     }
 }

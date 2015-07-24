@@ -17,7 +17,7 @@ class Atom {
     var objectNode: SCNNode
     var labelGeometry: SCNText?
     var labelNode: SCNNode?
-    var neighborAtoms: [Atom]
+    var neighborAtoms: [Int: [Atom]]
 
     required init() {
         self.color = ColorSchema(red: 100, green: 100, blue: 100)
@@ -25,7 +25,7 @@ class Atom {
         self.sphere.firstMaterial?.diffuse.contents = color.getUIColor()
         self.position = [0, 0, 0]
         self.objectNode = SCNNode(geometry: self.sphere)
-        self.neighborAtoms = []
+        self.neighborAtoms = [Int: [Atom]]()
     }
     
     class func generateAtoms<T: Atom>(atomNumber: Int) -> [T] {
@@ -41,9 +41,10 @@ class Atom {
     func generateBonds() -> [Bond] {
         var bonds: [Bond] = []
         
-        for atom in neighborAtoms {
-            let bond = Bond.generateBond(self.position, pos2: atom.position)
-            bonds.append(bond)
+        for (bondNumber, atoms) in neighborAtoms {
+            for atom in atoms {
+                bonds.extend(Bond.generateBonds(self.position, pos2: atom.position, bondNumber: bondNumber))
+            }
         }
         
         return bonds
