@@ -14,11 +14,13 @@ class Molecule {
     var name: String
     var atoms: [Atom]
     var bonds: [Bond]
+    var description: String
     
     init(name: String) {
         self.name = name
-        atoms = []
-        bonds = []
+        self.atoms = []
+        self.bonds = []
+        self.description = ""
     }
     
     func appendAtoms(atoms: [Atom]) {

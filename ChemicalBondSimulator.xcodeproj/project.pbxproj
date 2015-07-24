@@ -26,6 +26,7 @@
 		B27059A41B0C644A00B87E34 /* ChemicalBondSimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27059A31B0C644A00B87E34 /* ChemicalBondSimulatorTests.swift */; };
 		B27963801B5CD4D500FF930A /* MoleculeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279637F1B5CD4D500FF930A /* MoleculeGenerator.swift */; };
 		B281900E1B0FB90A008834F5 /* Benzene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B281900D1B0FB90A008834F5 /* Benzene.swift */; };
+		B2A28F5D1B62CBF4007070E2 /* MoleculeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A28F5C1B62CBF4007070E2 /* MoleculeDetailViewController.swift */; };
 		B2AA88691B0DA0B3004048FC /* ColorSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AA88681B0DA0B3004048FC /* ColorSchema.swift */; };
 		B2B4DA171B0DDD4100FEDBFD /* Molecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4DA161B0DDD4100FEDBFD /* Molecule.swift */; };
 		B2B4DA191B0DF80300FEDBFD /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4DA181B0DF80300FEDBFD /* Water.swift */; };
@@ -75,6 +76,7 @@
 		B27059A31B0C644A00B87E34 /* ChemicalBondSimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemicalBondSimulatorTests.swift; sourceTree = "<group>"; };
 		B279637F1B5CD4D500FF930A /* MoleculeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoleculeGenerator.swift; sourceTree = "<group>"; };
 		B281900D1B0FB90A008834F5 /* Benzene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Benzene.swift; path = Objects/Benzene.swift; sourceTree = "<group>"; };
+		B2A28F5C1B62CBF4007070E2 /* MoleculeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoleculeDetailViewController.swift; sourceTree = "<group>"; };
 		B2AA88681B0DA0B3004048FC /* ColorSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSchema.swift; sourceTree = "<group>"; };
 		B2B4DA161B0DDD4100FEDBFD /* Molecule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Molecule.swift; path = Objects/Molecule.swift; sourceTree = "<group>"; };
 		B2B4DA181B0DF80300FEDBFD /* Water.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Water.swift; path = Objects/Water.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				69887BF52CEA97CD21D64BE5 /* ChemicalBondSimulator-Bridging-Header.h */,
 				B2B4DA201B0EDB7F00FEDBFD /* SimulatorKeyView.xib */,
 				B279637F1B5CD4D500FF930A /* MoleculeGenerator.swift */,
+				B2A28F5C1B62CBF4007070E2 /* MoleculeDetailViewController.swift */,
 			);
 			path = ChemicalBondSimulator;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				B2D07FE01B6130950025F437 /* Trehalose.swift in Sources */,
 				B2D07FDE1B612CE20025F437 /* Ethanol.swift in Sources */,
 				B281900E1B0FB90A008834F5 /* Benzene.swift in Sources */,
+				B2A28F5D1B62CBF4007070E2 /* MoleculeDetailViewController.swift in Sources */,
 				B2B4DA1D1B0E1A9C00FEDBFD /* Bond.swift in Sources */,
 				B27963801B5CD4D500FF930A /* MoleculeGenerator.swift in Sources */,
 				B2B4DA191B0DF80300FEDBFD /* Water.swift in Sources */,
