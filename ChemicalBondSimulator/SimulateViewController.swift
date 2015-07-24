@@ -12,6 +12,15 @@ import SceneKit
 
 class SimulateViewController: UIViewController {
     
+    @IBOutlet weak var zoomInButton: UIButton!
+    @IBOutlet weak var zoomOutButton: UIButton!
+    @IBOutlet weak var hideButton: UIButton!
+    @IBOutlet weak var upperTurnButton: UIButton!
+    @IBOutlet weak var downerTurnButton: UIButton!
+    @IBOutlet weak var leftTurnButton: UIButton!
+    @IBOutlet weak var rightTurnButton: UIButton!
+    
+    
     var molecule: Molecule!
 
     override func viewDidLoad() {
@@ -126,6 +135,32 @@ class SimulateViewController: UIViewController {
         }
     }
     
+    func initKeyView() -> UIView {
+        var keyView: UIView = UINib(nibName: "SimulatorKeyView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! UIView
+        let screenSize: CGSize = UIScreen.mainScreen().applicationFrame.size
+        
+        //keyboard view sizing
+        keyView.frame.size.width = screenSize.width
+        keyView.frame.size.height = screenSize.height / 4
+//        keyView.frame.origin.y = screenSize.height / 4 * 3
+
+        
+        initKeyButtons()
+        
+        return keyView
+    }
+    
+    func initKeyButtons() {
+
+//        let margin:CGFloat = CGFloat(20.0)
+//        zoomInButton.frame.origin.x = 0.0
+//        zoomInButton.frame.origin.y = 0.0
+        
+        println(zoomInButton.frame.origin.x)
+        println(zoomInButton.frame.origin.y)
+        self.view.addSubview(zoomInButton)
+    }
+    
     override func shouldAutorotate() -> Bool {
         return true
     }
@@ -146,5 +181,9 @@ class SimulateViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var moleculeDetailViewController: MoleculeDetailViewController = segue.destinationViewController as! MoleculeDetailViewController
+        moleculeDetailViewController.molecule = self.molecule
+    }
 }
